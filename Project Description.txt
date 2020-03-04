@@ -1,0 +1,34 @@
+Genetic Algorithm
+-----------------
+Simple Genetic Algorithm which finds the correct sequence of numbers (initially provide a sample, but later can change for the numbers to be from user input)
+Number length can initially be lower (5 or 6?) to reduce runtime and check that the alogirthm works, later can expand
+
+
+
+PSUEDOCODE Process for Genetic Algorithm
+----------------------------------------
+START
+Generate the initial population (done)
+Compute fitness (done)
+REPEAT
+    Selection (done)
+    Crossover (done)
+    Mutation (will do later)
+    Compute fitness
+UNTIL population has converged
+STOP
+
+Regarding the Replacement process of each generation, will choose to undergo 'Generational Replacement', where all 'chromosomes' of each generation is replaced with children.
+To encourage parents with greater fitness to be chosen, will have half the new generation be 'bred' from the top half fitness parents, and the remaining half be bred from all parents. This allows for the new generation to have more children with a better fitness
+
+Further variations can be made, such as:
+    - Only have the top 2 fitness breed and replace the lowest fitness with it (i.e. steady state replacement)
+    - Breed all, and replace only the bottom half with the children
+
+
+As there are less combinations in this project than solving a TSP, the genetic algorithm will continue until the solution has fully converged (rather than iterating through a set number of generations, though that can be easily added)
+
+Crossover (i.e. baby making) for this project will simply be a 'One-Point Crossover', where a single point in the sequence is found and the children will be composed of the parents of either side of the cross. (Different crossover operators can be explored later) 
+
+Due to the simple Crossover formulation, mutation is almost essential, otherwise the genetic algorithm will get stuck, with the entire population converging to a sub-optimal value (in this case due to the simplicity of the task, only the exact value is considered sufficient)
+Initial mutation is done by selecting a random gene and randomly changing it, although it may be better to swap said gene with another of the same chromosome. Will change later depending on the results (no. of generation for results to converge)
