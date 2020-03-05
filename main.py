@@ -1,7 +1,9 @@
 from classes import Single, Population
 from evolution import Child
 
-goal = [2,4,6,8,10]     # This value will be changed once genetic algorithm is properly implemented.
+goal = input("Enter 5 integers (0-9 inclusive) that you wish to converge to, separated by a space")
+goal = goal.split()
+goal = list(map(int, goal))
 
 # Define the basic parameters
 pop_size = 20
