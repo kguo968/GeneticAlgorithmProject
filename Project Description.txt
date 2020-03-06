@@ -1,6 +1,6 @@
-Genetic Algorithm
+GENETIC ALGORITHM
 -----------------
-Simple Genetic Algorithm which finds the correct sequence of numbers (initially provide a sample, but later can change for the numbers to be from user input)
+Simple Genetic Algorithm (GA) which finds the correct sequence of numbers (initially provide a sample, but later can change for the numbers to be from user input)
 Number length can initially be lower (5 or 6?) to reduce runtime and check that the alogirthm works, later can expand
 
 
@@ -32,3 +32,13 @@ Crossover (i.e. baby making) for this project will simply be a 'One-Point Crosso
 
 Due to the simple Crossover formulation, mutation is almost essential, otherwise the genetic algorithm will get stuck, with the entire population converging to a sub-optimal value (in this case due to the simplicity of the task, only the exact value is considered sufficient)
 Initial mutation is done by selecting a random gene and randomly changing it, although it may be better to swap said gene with another of the same chromosome. Will change later depending on the results (no. of generation for results to converge)
+
+-----------------------------------------------------
+SIMULATION
+----------
+
+In order to obtain a more accurate depiction regarding the effectiveness of the GA, a simple simulation with a relatively large sample size will be conducted. 
+Simulation will control the adjustable parameters of the GA (such as mutation chance, population size, goal etc.) 
+
+Initial way of determining effectiveness will simple be the number of generations required to fully converge 
+
