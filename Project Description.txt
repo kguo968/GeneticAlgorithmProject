@@ -8,12 +8,12 @@ Number length can initially be lower (5 or 6?) to reduce runtime and check that 
 PSUEDOCODE Process for Genetic Algorithm
 ----------------------------------------
 START
-Generate the initial population (done)
-Compute fitness (done)
+Generate the initial population
+Compute fitness
 REPEAT
-    Selection (done)
-    Crossover (done)
-    Mutation (will do later)
+    Selection
+    Crossover
+    Mutation 
     Compute fitness
 UNTIL population has converged
 STOP
@@ -42,3 +42,14 @@ Simulation will control the adjustable parameters of the GA (such as mutation ch
 
 Initial way of determining effectiveness will simple be the number of generations required to fully converge 
 
+Define baseline results as:
+    goal = [2,4,6,8,10]
+    pop_size = 20
+    mut_chance = 0.05 (5%)
+
+Some changes to the GA that could be made to compare effectiveness with baseline are:
+    goal - randomise the selection of numbers
+    Increase/decrease the pop_size
+    Increase/decrease mut_chance
+    Change the way crossover is conducted
+    Change the replacement process (e.g. use steady state replacement)
