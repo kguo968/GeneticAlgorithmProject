@@ -1,6 +1,6 @@
 from classes import Population
 
-def genetic_algorithm(goal=[2,4,6,8,10], pop_size=20, mut_chance=0.05):
+def genetic_algorithm(goal=[3,3,7,9,2], pop_size=20, mut_chance=0.05):
     
     # Get user input for the goal of the Genetic Algorithm
     '''
@@ -30,9 +30,9 @@ def genetic_algorithm(goal=[2,4,6,8,10], pop_size=20, mut_chance=0.05):
         generation.sort_fittest()
 
         # Print out best of current generation
-        '''
-        print("Best Chromosome: %s \nFitness: %d \nCurrent Generation: %d" % (generation.get_fittest().combination, generation.get_fittest().fitness, current_gen))
-        '''
+        if __name__ == "__main__":
+            print("Best Chromosome: %s \nFitness: %d \nCurrent Generation: %d" % (generation.get_fittest().combination, generation.get_fittest().fitness, current_gen))
+        
 
         # Create new generation for population
         generation.new_generation(mut_chance)
@@ -43,8 +43,12 @@ def genetic_algorithm(goal=[2,4,6,8,10], pop_size=20, mut_chance=0.05):
         # Increment the generation counter
         current_gen += 1
 
-    '''
-    print("Goal of %s reached" %goal)
-    '''
+    if __name__ == "__main__":
+        print("Goal of %s reached" %goal)
+    
 
     return current_gen
+
+if __name__ == "__main__":
+    a = genetic_algorithm()
+    

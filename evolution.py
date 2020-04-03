@@ -20,7 +20,10 @@ class Child:
         for i in range(len(goal)):
             self.fitness += abs(self.combination[i]-goal[i])
 
-    def mutate_pop(self, child):
+    def mutate_pop(self, child):        
+        '''
+        MAYBE CHANGE THIS FOR FUTURE ITERATIONS
+        '''
     # Change a randomly chosen gene for mutation
         mutate_gene = randrange(len(child))
         child[mutate_gene] = randrange(0,11)
@@ -45,5 +48,8 @@ def create_child(population, size, children, mut_chance):
         cross_point = randrange(len(parent_a.combination)-1)
 
         # Instantiate objects from Child class to generate the children
+        '''
+        PERHAPS CHANGE CROSSOVER PROCESS
+        '''
         children.append(Child(parent_a, parent_b, cross_point, mut_chance))
 

@@ -1,7 +1,7 @@
 from ga import genetic_algorithm
 
 #gen_number = []
-sample_size = 100
+sample_size = 1000
 compute_base = False
 
 # Create new textfile to store the results
@@ -32,10 +32,11 @@ for i in range(sample_size):
         g.write("%d" %results2)
     else:
         g.write("%d\n" %results2)
+    print("Sample: %d" %(i))
 
 if compute_base:
     f.close()
 
 g.close()
 
-#print(gen_number)
+print("Completed sampling")
