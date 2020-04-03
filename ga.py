@@ -1,6 +1,6 @@
 from classes import Population
 
-def genetic_algorithm(goal=[3,3,7,9,2], pop_size=20, mut_chance=0.05):
+def genetic_algorithm(goal=[2,4,6,8,10,3], pop_size=20, mut_chance=0.05):
     
     # Get user input for the goal of the Genetic Algorithm
     '''
@@ -18,12 +18,12 @@ def genetic_algorithm(goal=[3,3,7,9,2], pop_size=20, mut_chance=0.05):
 
     # Generate the initial population
     generation = Population(pop_size)
-    generation.create_pop()
+    generation.create_pop(len(goal))
 
     # Compute fitness of initial population
     generation.pop_fitness(goal)
 
-    # Begin the 'evolution' process, whereby children are made, the weak are culled, and only the strong survive
+    # Begin the 'evolution' process
     while (generation.get_fittest().fitness > 0):     
 
         # Sort generation in order of fittest to least fittest

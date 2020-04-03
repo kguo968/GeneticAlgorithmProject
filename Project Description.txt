@@ -49,6 +49,7 @@ Define baseline results as:
 
 Some changes to the GA that could be made to compare effectiveness with baseline are:
     goal - randomise the selection of numbers
+    Changing the length of 'goal'
     Increase/decrease the pop_size
     Increase/decrease mut_chance
     Change the way crossover is conducted

@@ -3,10 +3,10 @@ import evolution as evo
 
 class Single:
 
-    def __init__(self):
+    def __init__(self, size):
         # Basic parameters for each 'chromosome', where each value in the index of the array is a 'gene'
-        self.combination = [randrange(11) for i in range(5)]
-        self.length = 5
+        self.combination = [randrange(11) for i in range(size)]
+        self.length = size
         self.fitness = 0
     
     def calcFitness(self, goal):
@@ -21,10 +21,10 @@ class Population:
         self.population = []
         self.size = pop_size
 
-    def create_pop(self):
+    def create_pop(self, goal_size):
     # Instantiate objects from the Single class to populate the generation    
         for i in range(self.size):
-            self.population.append(Single())
+            self.population.append(Single(goal_size))
 
     def pop_fitness(self, goal):
     # Call calcFitness from 'Single' class to calculate fitness of every object in the generation
